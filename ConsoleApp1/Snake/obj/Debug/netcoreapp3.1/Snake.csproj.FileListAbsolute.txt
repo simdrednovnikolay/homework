@@ -10,3 +10,4 @@ C:\Homework\ConsoleApp1\Snake\obj\Debug\netcoreapp3.1\Snake.AssemblyInfo.cs
 C:\Homework\ConsoleApp1\Snake\obj\Debug\netcoreapp3.1\Snake.dll
 C:\Homework\ConsoleApp1\Snake\obj\Debug\netcoreapp3.1\Snake.pdb
 C:\Homework\ConsoleApp1\Snake\obj\Debug\netcoreapp3.1\Snake.genruntimeconfig.cache
+C:\Homework\ConsoleApp1\Snake\obj\Debug\netcoreapp3.1\Snake.csprojAssemblyReference.cache

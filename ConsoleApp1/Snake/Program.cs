@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Snake
 {
@@ -6,12 +7,20 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();
-            p1.x = 3;
-            p1.y = 7;
-            p1.sym = '#';
-            p1.Draw();
+            Point p1 = new Point(4, 7, '?');
             
+
+            Point p2 = new Point(5, 8, '#');
+            
+
+            List<Point> pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2);
+
+            foreach( Point p3 in pList)
+            {
+                p3.Draw();
+            }
         }
 
         
