@@ -9,8 +9,8 @@ namespace Snake
         {
             
 
-            HorizontLine UpLine = new HorizontLine(0, 78, 0, '+');
-            HorizontLine DownLine = new HorizontLine(0, 78, 24, '+');
+            HorizontLine UpLine = new HorizontLine(0, 78, 0, '*');
+            HorizontLine DownLine = new HorizontLine(0, 78, 24, '*');
             VerticalLine LeftLine = new VerticalLine(0, 24, 0, '@');
             VerticalLine RightLine = new VerticalLine(0, 24, 78, '@');
 
