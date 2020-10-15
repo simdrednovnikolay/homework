@@ -18,6 +18,11 @@ namespace Snake
             DownLine.Drow();
             LeftLine.Drow();
             RightLine.Drow();
+
+            Point p = new Point(6, 7, '@');
+            Snake snake = new Snake(p, 6, Direction.UP);
+            snake.Drow();
+
         }
 
         
