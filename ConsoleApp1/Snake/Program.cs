@@ -6,6 +6,8 @@ namespace Snake
 {
     class Program
     {
+        public static ConsoleKeyInfo ConsoleKeyInfo { get; private set; }
+
         static void Main(string[] args)
         {
             
@@ -20,20 +22,29 @@ namespace Snake
             LeftLine.Drow();
             RightLine.Drow();
 
-            Point p = new Point(6, 7, '@');
-            Snake snake = new Snake(p, 6, Direction.UP);
+            Point p = new Point(3, 2, '*');
+            Snake snake = new Snake(p, 6, Direction.DOWN);
             snake.Drow();
-            snake.Move();
-            Thread.Sleep(250);
-            snake.Move();
-            Thread.Sleep(250);
-            snake.Move();
-            Thread.Sleep(250);
-            snake.Move();
-            Thread.Sleep(250);
-            snake.Move();
-            Thread.Sleep(250);
-            snake.Move();
+
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    if (key.Key == ConsoleKey.LeftArrow)
+                        snake.direction = Direction.LEFT;
+                    if (key.Key == ConsoleKey.RightArrow)
+                        snake.direction = Direction.RIGHT;
+                    if (key.Key == ConsoleKey.UpArrow)
+                        snake.direction = Direction.UP;
+                    if (key.Key == ConsoleKey.DownArrow)
+                        snake.direction = Direction.DOWN;
+                }
+
+                Thread.Sleep(100);
+                snake.Move();
+            }
+
 
         }
 
